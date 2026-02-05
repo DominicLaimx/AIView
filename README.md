@@ -1,16 +1,15 @@
-# AIView
-# 🧠 HERO: AI-Powered Mental Health Detection
+# AIView: Multi-agentic AI system for realistic technical interview preparation
 
 <div align="center">
 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
-**Can AI Spot Signs of Depression Before a Human Can?**
+**Can AI aid us in technical interview preparation**
 
-*Leveraging machine learning to detect early signals of mental health distress through text and speech pattern analysis*
+*Leveraging multi-agentic AI systems to provide realistic real-time technical interview guidance*
 
 [Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
 
@@ -23,13 +22,11 @@
 - [About](#about)
 - [Key Features](#key-features)
 - [How It Works](#how-it-works)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
 - [Model Architecture](#model-architecture)
 - [Results](#results)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [Research Team](#research-team)
 - [License](#license)
 - [Citation](#citation)
@@ -199,65 +196,15 @@ Input → [Text Encoder] ─┐
 Input → [Audio Encoder]─┘
 ```
 
----
-
-## 📈 Results
-
-| Metric | Score |
-|--------|-------|
-| Accuracy | 85.3% |
-| Precision | 82.7% |
-| Recall | 87.9% |
-| F1-Score | 85.2% |
-| AUC-ROC | 0.91 |
-
-*Results on held-out test set. Clinical validation ongoing.*
-
-**Important**: This is a research tool and should **not** replace professional mental health assessment.
-
----
-
-## 🗺️ Roadmap
-
-- [x] Initial text analysis model
-- [x] Speech pattern recognition
-- [ ] Multi-lingual support
-- [ ] Real-time monitoring dashboard
-- [ ] Mobile application
-- [ ] Integration with telehealth platforms
-- [ ] Longitudinal tracking features
-- [ ] Clinical trial validation
-
----
-
-## 🤝 Contributing
-
-We welcome contributions from researchers, developers, and clinicians!
-
-### How to Contribute
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Areas We Need Help With
-
-- 🧪 **Research**: Novel feature engineering, model architectures
-- 💻 **Development**: Code optimization, new features
-- 📊 **Data Science**: Data preprocessing, analysis pipelines
-- 🎨 **UX/UI**: Dashboard and visualization improvements
-- 📝 **Documentation**: Tutorials, examples, translations
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
----
-
 ## 👥 Research Team
 
-**Principal Investigator**: Dr. [Your Name]  
-**Affiliation**: College of Computing and Data Science, [University Name]
+**FYP student**: Dominic Lai Meng Xuan 
+
+**FYP student**: Manoj Siddharth 
+
+**Superivising Professor**: Dr. Owen Noel Newton Fernando 
+
+**Affiliation**: College of Computing and Data Science, Nanyang Technological University
 
 ### Student Opportunities
 
@@ -268,7 +215,7 @@ Undergraduate students can:
 - 🔬 Join research internships
 - 💡 Learn skills in Python, data analysis, and machine learning
 
-[Contact us](mailto:your.email@university.edu) or visit our [lab website](#)
+[Contact us](mailto:domi0015@e.ntu.edu.sg) or visit our [lab website](#)
 
 ---
 
@@ -297,12 +244,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{hero2024,
-  title={HERO: AI-Powered Early Detection of Mental Health Distress},
-  author={Your Name and Collaborators},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
-}
+
 ```
 
 ---
