@@ -1,4 +1,4 @@
-# AIView: Multi-agentic AI system for realistic technical interview preparation
+# AIView: A Multi-Agent Platform for Realistic Technical Interview Simulation
 
 <div align="center">
 
@@ -7,11 +7,9 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
-**Can AI aid us in technical interview preparation**
+**Can AI bridge the gap in technical interview preparation?**
 
-*Leveraging multi-agentic AI systems to provide realistic real-time technical interview guidance*
-
-[Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
+*A multi-modal AI simulation platform combining live coding, conversational interaction, and real-time behavioral analysis*
 
 </div>
 
@@ -20,248 +18,88 @@
 ## 📋 Table of Contents
 
 - [About](#about)
+- [The Problem](#the-problem)
 - [Key Features](#key-features)
-- [How It Works](#how-it-works)
-- [Usage](#usage)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Results](#results)
-- [Roadmap](#roadmap)
+- [Technical Architecture](#technical-architecture)
+- [Research Outcomes](#research-outcomes)
 - [Research Team](#research-team)
 - [License](#license)
-- [Citation](#citation)
 
 ---
 
 ## 🎯 About
 
-Mental health issues often go unnoticed until it's too late. **HERO** is a research project exploring how artificial intelligence can analyze text and speech patterns to detect early signals of mental health distress that humans often miss.
+**AIView** is a multi-modal AI interview simulation platform designed to integrate individual coding practice with realistic technical interview dialogue. By combining live coding tasks with conversational interaction, the system emulates real-world interview scenarios with natural conversational flow.
 
-### What We're Studying
+AIView is specifically designed to be **learning-focused**, emphasizing guided feedback and actionable insights to help users identify reasoning gaps and improve performance.
 
-We investigate how AI can identify subtle changes in:
-- 🗣️ **Tone and vocal patterns**
-- 📝 **Word choice and language structure**
-- 💭 **Emotional shifts over time**
-- 🔄 **Communication pattern changes**
+---
 
-### Why This Matters
+## 🚧 The Problem
 
-Early detection could help:
-- ✨ Doctors, counselors, and caregivers intervene sooner
-- 🏥 Support mental health screening tools
-- 💬 Power online support platforms
-- 🛡️ Enable preventive healthcare systems
+Technical interview preparation remains a significant challenge for students entering the tech industry. Existing solutions each fall short in important ways:
+
+- **Static coding platforms** (LeetCode, HackerRank) ignore the conversational aspect of interviews entirely
+- **Peer mock interviews** lack analytical depth and consistency
+- **Professional coaching** is financially inaccessible to most students
+- **AI simulators** (Final Round AI, Huru.ai) use rigid turn-based models that fail to capture natural dialogue flow
+
+Students need an accessible, realistic platform that can simulate interview scenarios with natural conversational flow and real-time feedback to build confidence and improve performance.
 
 ---
 
 ## ✨ Key Features
 
-- **Multi-Modal Analysis**: Processes both text and speech data
-- **Pattern Recognition**: Identifies subtle linguistic and acoustic markers
-- **Temporal Tracking**: Monitors changes in communication over time
-- **Privacy-Focused**: Trained on anonymized datasets with ethical considerations
-- **Explainable AI**: Provides interpretable results for clinical review
-- **Real-time Processing**: Efficient inference for practical applications
+**Holistic Assessment** — Synchronizes technical code evaluation with behavioral analysis to capture the candidate's full performance profile.
+
+**Multi-Channel Inputs** — Processes verbal responses, non-verbal cues, and live programming logic simultaneously.
+
+**Actionable Feedback** — Translates complex multi-modal data into actionable, evidence-based feedback, identifying specific areas for growth.
 
 ---
 
-## 🔬 How It Works
+## 🏗️ Technical Architecture
 
-```mermaid
-graph LR
-    A[Input Data] --> B[Preprocessing]
-    B --> C[Feature Extraction]
-    C --> D[ML Model]
-    D --> E[Risk Assessment]
-    E --> F[Clinical Review]
-    F --> G[Intervention]
-```
+AIView's architecture is built around a LangGraph-based multi-agent system that coordinates several specialized components:
 
-1. **Data Collection**: Gather anonymized text/speech samples
-2. **Feature Extraction**: Extract linguistic, acoustic, and temporal features
-3. **Model Inference**: Process through trained neural networks
-4. **Risk Scoring**: Generate interpretable risk indicators
-5. **Human Review**: Clinical professionals review flagged cases
+- **Multi-Agent Orchestration**: LangGraph + Azure OpenAI for adaptive agent state management
+- **Speech Processing**: Azure TTS and Whisper transcription for natural voice interaction
+- **Computer Vision**: Mediapipe and DeepFace for real-time behavioral and facial analysis
+- **Live Coding Environment**: Integrated coding interface evaluated in parallel with conversational flow
+
+The system is designed to synchronize multi-modal inputs with adaptive agent states, enabling seamless interaction between the user and the simulation.
 
 ---
 
-## 🚀 Installation
+## 🔬 Research Outcomes
 
-### Prerequisites
+To optimize AIView for high-fidelity simulation, we iteratively evaluated various modules for each component to ensure seamless interaction between the user and the system. This research process resulted in three primary contributions:
 
-- Python 3.8 or higher
-- pip package manager
-- (Optional) CUDA-capable GPU for training
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/hero-mental-health-ai.git
-cd hero-mental-health-ai
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download pre-trained models (if available)
-python scripts/download_models.py
-```
-
-### Docker Installation
-
-```bash
-# Build the Docker image
-docker build -t hero-ai .
-
-# Run the container
-docker run -p 8000:8000 hero-ai
-```
+1. **System Design** — A demonstration of LangGraph-based synchronization of multi-modal inputs with adaptive agent states
+2. **Empirical Insights** — Findings from pilot studies on AI realism and conversational effectiveness
+3. **Design Framework** — A framework for balancing social tension with pedagogical support in AI-driven professional training
 
 ---
-
-## 💻 Usage
-
-### Basic Example
-
-```python
-from hero import MentalHealthDetector
-
-# Initialize the detector
-detector = MentalHealthDetector(model_path='models/hero_v1.pth')
-
-# Analyze text
-text = "Your text sample here..."
-result = detector.analyze_text(text)
-
-print(f"Risk Score: {result.risk_score}")
-print(f"Key Indicators: {result.indicators}")
-```
-
-### Command Line Interface
-
-```bash
-# Analyze a text file
-python -m hero analyze --input sample.txt --output results.json
-
-# Process speech audio
-python -m hero analyze-audio --input audio.wav --output results.json
-
-# Batch processing
-python -m hero batch --input-dir data/ --output-dir results/
-```
-
-### API Usage
-
-```bash
-# Start the API server
-python -m hero.api --host 0.0.0.0 --port 8000
-
-# Make a request
-curl -X POST http://localhost:8000/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"text": "Your text here"}'
-```
-
----
-
-## 📊 Dataset
-
-We use anonymized, ethically-sourced datasets including:
-
-- **DAIC-WOZ**: Wizard-of-Oz interviews for depression assessment
-- **AVEC**: Audio/Visual Emotion Challenge datasets
-- **Custom Corpus**: De-identified clinical interview transcripts (IRB approved)
-
-**Privacy Notice**: All data is anonymized and used in accordance with IRB protocols and GDPR/HIPAA guidelines.
-
----
-
-## 🏗️ Model Architecture
-
-Our approach combines multiple deep learning architectures:
-
-- **Text Analysis**: BERT-based transformer models for linguistic features
-- **Speech Analysis**: Wav2Vec 2.0 for acoustic feature extraction
-- **Temporal Modeling**: LSTM networks for tracking changes over time
-- **Fusion Layer**: Multi-modal integration for final risk assessment
-
-```
-Input → [Text Encoder] ─┐
-                        ├→ [Fusion] → [Classifier] → Risk Score
-Input → [Audio Encoder]─┘
-```
 
 ## 👥 Research Team
 
-**FYP student**: Dominic Lai Meng Xuan 
-
-**FYP student**: Manoj Siddharth 
-
-**Superivising Professor**: Dr. Owen Noel Newton Fernando 
+| Role | Name |
+|------|------|
+| FYP Student | Dominic Lai Meng Xuan |
+| FYP Student | Manoj Siddharth |
+| Supervising Professor | Dr. Owen Noel Newton Fernando |
 
 **Affiliation**: College of Computing and Data Science, Nanyang Technological University
 
-### Student Opportunities
+Interested in research at the intersection of AI, education, and human-computer interaction? Undergraduate students can conduct Final Year Projects, join research internships, and develop skills in Python, multi-agent systems, and applied ML.
 
-Interested in research at the intersection of AI, psychology, and ethics?
-
-Undergraduate students can:
-- 🎓 Conduct Final Year Projects with our lab
-- 🔬 Join research internships
-- 💡 Learn skills in Python, data analysis, and machine learning
-
-[Contact us](mailto:domi0015@e.ntu.edu.sg) or visit our [lab website](#)
-
----
-
-## ⚖️ Ethical Considerations
-
-This project adheres to strict ethical guidelines:
-
-- ✅ **Privacy Protection**: All data anonymized and encrypted
-- ✅ **Bias Mitigation**: Regular audits for demographic fairness
-- ✅ **Transparency**: Explainable AI techniques for interpretability
-- ✅ **Human Oversight**: Clinical professionals review all outputs
-- ✅ **Informed Consent**: Proper consent protocols for data collection
-
-**Disclaimer**: This tool is for research purposes only and does not provide medical advice. Always consult qualified mental health professionals.
+[Contact us](mailto:domi0015@e.ntu.edu.sg)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📚 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-
-```
-
----
-
-## 📞 Contact
-
-- **Project Lead**: [Your Name](mailto:your.email@university.edu)
-- **Lab Website**: [https://yourlab.university.edu](https://yourlab.university.edu)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/hero-mental-health-ai/issues)
-
----
-
-## 🙏 Acknowledgments
-
-- Research supported by [Grant/Funding Source]
-- Special thanks to [Collaborators/Institutions]
-- Built with [TensorFlow/PyTorch/etc.]
+This project is licensed under the MIT License.
 
 ---
 
@@ -269,6 +107,6 @@ If you use this work in your research, please cite:
 
 **⭐ If you find this project useful, please consider giving it a star! ⭐**
 
-Made with ❤️ by the HERO Research Team
+Made with ❤️ by the AIView Research Team at NTU
 
 </div>
