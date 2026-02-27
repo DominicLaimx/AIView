@@ -4,7 +4,6 @@
 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
 **Can AI bridge the gap in technical interview preparation?**
@@ -97,12 +96,6 @@ To optimize AIView for high-fidelity simulation, we iteratively evaluated variou
 Interested in research at the intersection of AI, education, and human-computer interaction? Undergraduate students can conduct Final Year Projects, join research internships, and develop skills in Python, multi-agent systems, and applied ML.
 
 [Contact us](mailto:domi0015@e.ntu.edu.sg)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
