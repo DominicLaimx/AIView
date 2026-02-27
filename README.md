@@ -32,7 +32,7 @@
 **AIView** is a multi-modal AI interview simulation platform designed to integrate individual coding practice with realistic technical interview dialogue. By combining live coding tasks with conversational interaction, the system emulates real-world interview scenarios with natural conversational flow.
 
 AIView is specifically designed to be **learning-focused**, emphasizing guided feedback and actionable insights to help users identify reasoning gaps and improve performance.
-<img width="2196" height="872" alt="image" src="https://github.com/user-attachments/assets/18e90d26-47af-4cab-98a5-02fb33b613cd" />
+
 <img width="2082" height="1106" alt="image" src="https://github.com/user-attachments/assets/d28fc208-a59f-4450-95d1-8c64537d80f4" />
 
 ---
@@ -71,6 +71,7 @@ AIView's architecture is built around a LangGraph-based multi-agent system that 
 
 The system is designed to synchronize multi-modal inputs with adaptive agent states, enabling seamless interaction between the user and the simulation.
 
+<img width="2196" height="872" alt="image" src="https://github.com/user-attachments/assets/18e90d26-47af-4cab-98a5-02fb33b613cd" />
 ---
 
 ## 🔬 Research Outcomes
